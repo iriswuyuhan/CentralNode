@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="nju.edu.cn/schema/a"
+           xmlns="nju.edu.cn/schema/a"
+           elementFormDefault="qualified">
+
+    <xs:simpleType name="a_id_type">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="8" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="a_name_type">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="10" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="a_credit_type">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="2" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="a_teacher_type">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="10" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="a_location_type">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="20" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="a_share_type">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="1" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="a_course_type">
+        <xs:all>
+            <xs:element name="课程编号" type="a_id_type" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="课程名称" type="a_name_type" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="学分" type="a_credit_type" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="授课老师" type="a_teacher_type" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="授课地点" type="a_location_type" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="共享" type="a_share_type" minOccurs="0" maxOccurs="1"/>
+        </xs:all>
+    </xs:complexType>
+
+    <xs:element name="课程" type="a_course_type"/>
+
+</xs:schema>

@@ -35,9 +35,11 @@
         </xs:restriction>
     </xs:simpleType>
 
+    <xs:element name="Cno" type="c_id_type"/>
+
     <xs:complexType name="c_course_type">
         <xs:all>
-            <xs:element name="Cno" type="c_id_type" minOccurs="1" maxOccurs="1"/>
+            <xs:element ref="Cno" minOccurs="1" maxOccurs="1"/>
             <xs:element name="Cnm" type="c_name_type" minOccurs="0" maxOccurs="1"/>
             <xs:element name="Ctm" type="xs:integer" minOccurs="0" maxOccurs="1"/>
             <xs:element name="Cpt" type="xs:integer" minOccurs="0" maxOccurs="1"/>
@@ -48,5 +50,13 @@
     </xs:complexType>
 
     <xs:element name="课程" type="c_course_type"/>
+
+    <xs:complexType name="c_course_list_type">
+        <xs:all>
+            <xs:element ref="课程" />
+        </xs:all>
+    </xs:complexType>
+
+    <xs:element name="课程列表" type="c_course_list_type"/>
 
 </xs:schema>

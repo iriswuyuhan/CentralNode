@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="nju.edu.cn/schema/c"
+           xmlns="nju.edu.cn/schema/c"
+           elementFormDefault="qualified">
+
+    <xs:include schemaLocation="studentC.xsd"/>
+    <xs:include schemaLocation="courseC.xsd"/>
+
+    <xs:complexType name="c_select">
+        <xs:sequence>
+            <xs:element ref="学生信息" maxOccurs="1" minOccurs="1"/>
+            <xs:element ref="Cno" maxOccurs="1" minOccurs="1"/>
+            <xs:element name="Grd" type="xs:integer" maxOccurs="1" minOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="选课" type="c_select"/>
+</xs:schema>

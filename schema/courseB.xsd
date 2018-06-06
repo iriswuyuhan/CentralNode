@@ -46,9 +46,11 @@
         </xs:restriction>
     </xs:simpleType>
 
+    <xs:element name="编号" type="b_id_type"/>
+
     <xs:complexType name="b_course_type">
         <xs:all>
-            <xs:element name="编号" type="b_id_type" minOccurs="1" maxOccurs="1"/>
+            <xs:element ref="编号" minOccurs="1" maxOccurs="1"/>
             <xs:element name="名称" type="b_name_type" minOccurs="0" maxOccurs="1"/>
             <xs:element name="课时" type="b_lesson_type" minOccurs="0" maxOccurs="1"/>
             <xs:element name="学分" type="b_credit_type" minOccurs="0" maxOccurs="1"/>
@@ -59,5 +61,13 @@
     </xs:complexType>
 
     <xs:element name="课程" type="b_course_type"/>
+
+    <xs:complexType name="b_course_list_type">
+        <xs:all>
+            <xs:element ref="课程" />
+        </xs:all>
+    </xs:complexType>
+
+    <xs:element name="课程列表" type="b_course_list_type"/>
 
 </xs:schema>

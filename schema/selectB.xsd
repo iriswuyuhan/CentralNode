@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="nju.edu.cn/schema/b"
+           xmlns="nju.edu.cn/schema/b"
+           elementFormDefault="qualified">
+
+    <xs:include schemaLocation="studentB.xsd"/>
+    <xs:include schemaLocation="courseB.xsd"/>
+
+    <xs:simpleType name="b_score_type">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="3"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="b_select">
+        <xs:sequence>
+            <xs:element ref="学生信息" maxOccurs="1" minOccurs="1"/>
+            <xs:element ref="编号" maxOccurs="1" minOccurs="1"/>
+            <xs:element name="得分" type="b_score_type" maxOccurs="1" minOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="选课" type="b_select"/>
+</xs:schema>

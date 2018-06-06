@@ -57,6 +57,7 @@
             <xs:element name="老师" type="b_teacher_type" minOccurs="0" maxOccurs="1"/>
             <xs:element name="地点" type="b_location_type" minOccurs="0" maxOccurs="1"/>
             <xs:element name="共享" type="b_share_type" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="已选" type="xs:boolean" minOccurs="1" maxOccurs="1"/>
         </xs:all>
     </xs:complexType>
 

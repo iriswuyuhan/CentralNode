@@ -16,7 +16,7 @@
                 <xsl:value-of select="a:课程名称"/>
             </xsl:element>
             <xsl:element name="b:课时">
-                未知
+                Null
             </xsl:element>
             <xsl:element name="b:学分">
                 <xsl:value-of select="a:学分"/>

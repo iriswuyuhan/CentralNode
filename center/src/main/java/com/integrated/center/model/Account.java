@@ -1,15 +1,15 @@
 package com.integrated.center.model;
 
-public class AccountModel {
+public class Account {
     private String name;//账户名
     private String password;
     private Integer level;//级别
     private String sId;//客体，学生id外键
 
-    public AccountModel() {
+    public Account() {
     }
 
-    public AccountModel(String name, String password, Integer level, String sId) {
+    public Account(String name, String password, Integer level, String sId) {
         this.name = name;
         this.password = password;
         this.level = level;

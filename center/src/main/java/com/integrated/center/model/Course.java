@@ -1,7 +1,7 @@
 package com.integrated.center.model;
 
-public class SubjectModel {
-    private String id;
+public class Course {
+    private String cId;
     private String name;
     private String time;
     private String score;
@@ -9,11 +9,11 @@ public class SubjectModel {
     private String location;
     private char share;//课程是否共享
 
-    public SubjectModel() {
+    public Course() {
     }
 
-    public SubjectModel(String id, String name, String time, String score, String teacher, String location, char share) {
-        this.id = id;
+    public Course(String cId, String name, String time, String score, String teacher, String location, char share) {
+        this.cId = cId;
         this.name = name;
         this.time = time;
         this.score = score;
@@ -22,12 +22,12 @@ public class SubjectModel {
         this.share = share;
     }
 
-    public String getId() {
-        return id;
+    public String getcId() {
+        return cId;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setcId(String cId) {
+        this.cId = cId;
     }
 
     public String getName() {

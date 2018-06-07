@@ -1,16 +1,16 @@
 package com.integrated.center.model;
 
-public class StudentModel {
+public class Student {
     private String sId;
     private String sName;
     private String gender;
     private String major;
     private String password;
 
-    public StudentModel() {
+    public Student() {
     }
 
-    public StudentModel(String sId, String sName, String gender, String major, String password) {
+    public Student(String sId, String sName, String gender, String major, String password) {
         this.sId = sId;
         this.sName = sName;
         this.gender = gender;

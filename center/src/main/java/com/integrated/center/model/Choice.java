@@ -1,14 +1,14 @@
 package com.integrated.center.model;
 
-public class ChoiceModel {
+public class Choice {
     private String sId;
     private String cId;
     private String score;
 
-    public ChoiceModel() {
+    public Choice() {
     }
 
-    public ChoiceModel(String sId, String cId, String score) {
+    public Choice(String sId, String cId, String score) {
         this.sId = sId;
         this.cId = cId;
         this.score = score;

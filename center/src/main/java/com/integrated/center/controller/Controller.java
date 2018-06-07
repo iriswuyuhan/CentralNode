@@ -20,6 +20,11 @@ public class Controller {
     @Autowired
     private Service service;
 
+    @GetMapping("/login")
+    public Boolean login(String name, String password){
+        return service.login(name, password);
+    }
+
     @GetMapping("/getShareCourses")
     public String getShareCourses(){
         Courses courses = service.getShareCourses();
@@ -68,12 +73,12 @@ public class Controller {
         return res;
     }
 
-    @PostMapping("/chooseCourse")
+    @GetMapping("/chooseCourse")
     public Boolean chooseCourse(String sId, String cId){
         return service.chooseCourse(sId, cId);
     }
 
-    @PostMapping("/quitSubject")
+    @GetMapping("/quitSubject")
     public Boolean quitSubject(String sId, String cId){
         return service.quitSubject(sId, cId);
     }

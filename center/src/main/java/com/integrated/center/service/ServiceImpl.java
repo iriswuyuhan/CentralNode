@@ -7,6 +7,11 @@ import com.integrated.center.model.Students;
 @org.springframework.stereotype.Service
 public class ServiceImpl implements Service{
     @Override
+    public Boolean login(String name, String password) {
+        return null;
+    }
+
+    @Override
     public Courses getShareCourses() {
         return null;
     }

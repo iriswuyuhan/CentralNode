@@ -5,6 +5,8 @@ import com.integrated.center.model.Courses;
 import com.integrated.center.model.Students;
 
 public interface Service {
+    public Boolean login(String name, String password);
+
     public Courses getShareCourses();
 
     public Courses getAllCourses();

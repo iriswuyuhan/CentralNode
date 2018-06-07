@@ -46,11 +46,13 @@
         </xs:restriction>
     </xs:simpleType>
 
+    <xs:element name="Sno" type="c_sid_type"/>
+
     <xs:complexType name="c_student_type">
         <xs:all>
             <xs:element name="acc" type="c_pid_type" maxOccurs="1" minOccurs="1"/>
             <xs:element name="passwd" type="c_password_type" maxOccurs="1" minOccurs="0"/>
-            <xs:element name="Sno" type="c_sid_type" maxOccurs="1" minOccurs="1"/>
+            <xs:element ref="Sno" maxOccurs="1" minOccurs="1"/>
             <xs:element name="Sde" type="c_dep_type" maxOccurs="1" minOccurs="0"/>
             <xs:element name="Snm" type="c_sname_type" maxOccurs="1" minOccurs="0"/>
             <xs:element name="Sex" type="c_sgender_type" maxOccurs="1" minOccurs="0"/>

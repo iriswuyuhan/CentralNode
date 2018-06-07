@@ -44,13 +44,15 @@
             <xs:maxLength value="10"/>
         </xs:restriction>
     </xs:simpleType>
-    
+
+    <xs:element name="学号" type="a_sid_type"/>
+
     <xs:complexType name="a_student_type">
         <xs:all>
             <xs:element name="账户名" type="a_pid_type" maxOccurs="1" minOccurs="1"/>
             <xs:element name="密码" type="a_password_type" maxOccurs="1" minOccurs="0"/>
             <xs:element name="权限" type="a_auth_type" maxOccurs="1" minOccurs="0"/>
-            <xs:element name="学号" type="a_sid_type" maxOccurs="1" minOccurs="1"/>
+            <xs:element ref="学号" maxOccurs="1" minOccurs="1"/>
             <xs:element name="院系" type="a_dep_type" maxOccurs="1" minOccurs="0"/>
             <xs:element name="姓名" type="a_sname_type" maxOccurs="1" minOccurs="0"/>
             <xs:element name="性别" type="a_sgender_type" maxOccurs="1" minOccurs="0"/>

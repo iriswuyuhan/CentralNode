@@ -9,7 +9,8 @@
 
     <xs:complexType name="c_select">
         <xs:sequence>
-            <xs:element ref="学生信息" maxOccurs="1" minOccurs="1"/>
+            <xs:element name="课程院系" type="xs:string" maxOccurs="1" minOccurs="1"/>
+            <xs:element ref="Sno" maxOccurs="1" minOccurs="1"/>
             <xs:element ref="Cno" maxOccurs="1" minOccurs="1"/>
             <xs:element name="Grd" type="xs:integer" maxOccurs="1" minOccurs="1"/>
         </xs:sequence>

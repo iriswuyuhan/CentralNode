@@ -15,7 +15,8 @@
 
     <xs:complexType name="b_select">
         <xs:sequence>
-            <xs:element ref="学生信息" maxOccurs="1" minOccurs="1"/>
+            <xs:element name="课程院系" type="xs:string" maxOccurs="1" minOccurs="1"/>
+            <xs:element ref="学号" maxOccurs="1" minOccurs="1"/>
             <xs:element ref="编号" maxOccurs="1" minOccurs="1"/>
             <xs:element name="得分" type="b_score_type" maxOccurs="1" minOccurs="1"/>
         </xs:sequence>

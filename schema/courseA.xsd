@@ -50,16 +50,15 @@
             <xs:element name="授课老师" type="a_teacher_type" minOccurs="0" maxOccurs="1"/>
             <xs:element name="授课地点" type="a_location_type" minOccurs="0" maxOccurs="1"/>
             <xs:element name="共享" type="a_share_type" minOccurs="0" maxOccurs="1"/>
-
         </xs:all>
     </xs:complexType>
 
     <xs:element name="课程" type="a_course_type"/>
 
     <xs:complexType name="a_course_list_type">
-        <xs:all>
-            <xs:element ref="课程" />
-        </xs:all>
+        <xs:sequence>
+            <xs:element ref="课程" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
     </xs:complexType>
 
     <xs:element name="课程列表" type="a_course_list_type"/>

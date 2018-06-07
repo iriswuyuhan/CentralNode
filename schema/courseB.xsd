@@ -63,9 +63,9 @@
     <xs:element name="课程" type="b_course_type"/>
 
     <xs:complexType name="b_course_list_type">
-        <xs:all>
-            <xs:element ref="课程" />
-        </xs:all>
+        <xs:sequence>
+            <xs:element ref="课程" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
     </xs:complexType>
 
     <xs:element name="课程列表" type="b_course_list_type"/>

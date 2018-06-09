@@ -61,4 +61,12 @@
     </xs:complexType>
 
     <xs:element name="学生信息" type="b_student_type"/>
+
+    <xs:complexType name="b_stu_list_type">
+        <xs:sequence>
+            <xs:element name="学生信息" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="学生列表" type="b_stu_list_type"/>
 </xs:schema>

@@ -5,6 +5,10 @@ import com.integrated.center.util.CallInterface;
 import static com.integrated.center.util.DataConstant.A_URL;
 
 public class SystemA {
+    public String login(String acc, String password){
+        return CallInterface.interfaceUtil(A_URL + "/login?account="+acc+"&password="+password+"", "");
+    }
+
     public String getAllCourses(){
         return CallInterface.interfaceUtil(A_URL + "/course/getAll/", "");
     }

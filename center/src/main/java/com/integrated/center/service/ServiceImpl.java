@@ -1,9 +1,5 @@
 package com.integrated.center.service;
 
-import com.integrated.center.model.Choices;
-import com.integrated.center.model.Courses;
-import com.integrated.center.model.Students;
-
 @org.springframework.stereotype.Service
 public class ServiceImpl implements Service{
     @Override
@@ -12,22 +8,22 @@ public class ServiceImpl implements Service{
     }
 
     @Override
-    public Courses getShareCourses() {
+    public String getShareCourses() {
         return null;
     }
 
     @Override
-    public Courses getAllCourses() {
+    public String getAllCourses() {
         return null;
     }
 
     @Override
-    public Students getAllStudents() {
+    public String getAllStudents() {
         return null;
     }
 
     @Override
-    public Choices getAllChoices() {
+    public String getAllChoices() {
         return null;
     }
 

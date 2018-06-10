@@ -1,14 +1,8 @@
 package com.integrated.center.controller;
 
-import com.integrated.center.model.Choices;
-import com.integrated.center.model.Courses;
-import com.integrated.center.model.Student;
-import com.integrated.center.model.Students;
 import com.integrated.center.service.Service;
-import com.integrated.center.util.BeanToXml;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -27,50 +21,22 @@ public class Controller {
 
     @GetMapping("/getShareCourses")
     public String getShareCourses(){
-        Courses courses = service.getShareCourses();
-        String res = "";
-        try {
-            res = BeanToXml.beanToXml(courses, Courses.class);
-        } catch (JAXBException e) {
-            e.printStackTrace();
-        }
-        return res;
+        return service.getShareCourses();
     }
 
     @GetMapping("/getAllCourses")
     public String getAllCourses(){
-        Courses courses = service.getAllCourses();
-        String res = "";
-        try {
-            res = BeanToXml.beanToXml(courses, Courses.class);
-        } catch (JAXBException e) {
-            e.printStackTrace();
-        }
-        return res;
+        return service.getAllCourses();
     }
 
     @GetMapping("/getAllStudents")
     public String getAllStudents(){
-        Students students = service.getAllStudents();
-        String res = "";
-        try {
-            res = BeanToXml.beanToXml(students, Students.class);
-        } catch (JAXBException e) {
-            e.printStackTrace();
-        }
-        return res;
+        return service.getAllStudents();
     }
 
     @GetMapping("/getAllChoices")
     public String getAllChoices(){
-        Choices choices = service.getAllChoices();
-        String res = "";
-        try {
-            res = BeanToXml.beanToXml(choices, Choices.class);
-        } catch (JAXBException e) {
-            e.printStackTrace();
-        }
-        return res;
+        return service.getAllChoices();
     }
 
     @GetMapping("/chooseCourse")

@@ -2,9 +2,14 @@ package com.integrated.center.dao;
 
 import com.integrated.center.util.CallInterface;
 
+import static com.integrated.center.util.DataConstant.A_URL;
 import static com.integrated.center.util.DataConstant.B_URL;
 
 public class SystemB {
+
+    public String login(String acc, String password){
+        return CallInterface.interfaceUtil(B_URL + "/login?id="+acc+"&password="+password+"", "");
+    }
     public String getAllCourses(){
         return CallInterface.interfaceUtil(B_URL + "/B_Subject", "");
     }

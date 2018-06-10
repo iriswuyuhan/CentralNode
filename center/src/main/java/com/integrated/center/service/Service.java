@@ -1,19 +1,15 @@
 package com.integrated.center.service;
 
-import com.integrated.center.model.Choices;
-import com.integrated.center.model.Courses;
-import com.integrated.center.model.Students;
-
 public interface Service {
     public Boolean login(String name, String password);
 
-    public Courses getShareCourses();
+    public String getShareCourses();
 
-    public Courses getAllCourses();
+    public String getAllCourses();
 
-    public Students getAllStudents();
+    public String getAllStudents();
 
-    public Choices getAllChoices();
+    public String getAllChoices();
 
     public Boolean chooseCourse(String sId, String cId);
 
